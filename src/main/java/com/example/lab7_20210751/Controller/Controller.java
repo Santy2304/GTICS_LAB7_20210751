@@ -143,8 +143,12 @@ public class Controller {
                 if (userReci.getAuthorizedResource().equals("Cliente")){
                     userFromDb.setAuthorizedResource(resourceRepository.findById(6).get());
                 }
-                if (userReci.getAuthorizedResource().equals("Cliente")){
-                    userFromDb.setAuthorizedResource(resourceRepository.findById(6).get());
+                if (userReci.getAuthorizedResource().equals("analista de promociones")){
+                    userFromDb.setAuthorizedResource(resourceRepository.findById(7).get());
+                }
+
+                if (userReci.getAuthorizedResource().equals("analista logístico")){
+                    userFromDb.setAuthorizedResource(resourceRepository.findById(8).get());
                 }
                 rpta.put("result", "ok");
                 return ResponseEntity.ok(rpta);
